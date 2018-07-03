@@ -27,6 +27,17 @@
   <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
 
 
+
+  <!--COLOR CODING TOGGLE-->
+  <script type="text/javascript">
+    /*These two variables let you enable/disable the colour coding of
+    the title backgrounds (colorCoding) and the filter links (colorNav)
+    respectively. true = enabled, false =disabled*/
+    var colorCoding = true;
+    var colorNav = false;
+  </script>
+
+
   <!--FALL BACK FOR NO JAVASCRIPT-->
   <noscript>
   <style type="text/css">
@@ -49,22 +60,7 @@
   </style>
 </noscript>
 
-<!--COLOR CODING TOGGLE-->
-<script type="text/javascript">
-  /*These two variables let you enable/disable the colour coding of
-  the title backgrounds (colorCoding) and the filter links (colorNav)
-  respectively. true = enabled, false =disabled*/
-  var colorCoding = true;
-  var colorNav = false;
-</script>
-
 <style type="text/css">
-/*COLOURS OF FILTER GROUPS*/
-/*This is where you can set the colours for each filter
-group. groups 1-5 (or 10 if you enable them). All you need
-to do is change the colour values. If you've enabled the
-colour coding above this is the colours that'll be used!*/
-
   :root {
   /*GROUP 1*/
   --g1: #ff9600;
@@ -107,6 +103,8 @@ colour coding above this is the colours that'll be used!*/
   #links a {
     font-size: 18px;
     }
+
+  body > iframe:first-child {display: none !important;}
   }
 
 /*SCREENS BIGGER OR EQUAL TO 900px*/
@@ -213,7 +211,6 @@ header {
   width: auto;
   margin: 0px auto 20px;
   background: #fff;
-  border-bottom: 20px solid #fff;
   }
 
 #links {
@@ -240,6 +237,7 @@ header {
   margin: 20px 10px 0 0;
   line-height: 150%;
   overflow-y: auto;
+  border-bottom: 20px solid #fff;
   }
 
 /*FILTER NAVIGATION*/
@@ -303,7 +301,7 @@ table {
   }
 
 .cinfo {padding: 5px}
-.cinfo .right {text-align: right;}
+.cinfo td:nth-child(2n) {text-align: right;}
 .cinfo .left {font-weight: bold;}
 
 .cinfo p {
@@ -314,7 +312,7 @@ table {
   font-size: 12px;
   font-style: italic;
   overflow-y: auto;
-  }
+  }g
 
 /*COLOURS*/
 .g1 a:hover {color: var(--g1);}
@@ -427,20 +425,20 @@ table {
         <div class="cinfo">
           <table>
             <tr>
-              <td ><b>AGE:</b></td>
-              <td class="right">00</td>
+              <td><b>AGE:</b></td>
+              <td>00</td>
             </tr>
             <tr>
-              <td class="left"><b>GENDER:</b></td>
-              <td class="right">Gen. / Pron.</td>
+              <td><b>GENDER:</b></td>
+              <td>Gen. / Pron.</td>
             </tr>
             <tr>
-              <td class="left"><b>OCCUP.:</b></td>
-              <td class="right">Occupation</td>
+              <td><b>OCCUP.:</b></td>
+              <td>Occupation</td>
             </tr>
             <tr>
-               <td class="left"><b>NATION.:</b></td>
-               <td class="right">Nationality</td>
+               <td><b>NATION.:</b></td>
+               <td>Nationality</td>
             </tr>
           </table>
 
@@ -464,20 +462,20 @@ table {
         <div class="cinfo">
           <table>
             <tr>
-              <td ><b>AGE:</b></td>
-              <td class="right">00</td>
+              <td><b>AGE:</b></td>
+              <td>00</td>
             </tr>
             <tr>
-              <td class="left"><b>GENDER:</b></td>
-              <td class="right">Gen. / Pron.</td>
+              <td><b>GENDER:</b></td>
+              <td>Gen. / Pron.</td>
             </tr>
             <tr>
-              <td class="left"><b>OCCUP.:</b></td>
-              <td class="right">Occupation</td>
+              <td><b>OCCUP.:</b></td>
+              <td>Occupation</td>
             </tr>
             <tr>
-               <td class="left"><b>NATION.:</b></td>
-               <td class="right">Nationality</td>
+               <td><b>NATION.:</b></td>
+               <td>Nationality</td>
             </tr>
           </table>
 
@@ -499,20 +497,20 @@ table {
         <div class="cinfo">
           <table>
             <tr>
-              <td ><b>AGE:</b></td>
-              <td class="right">00</td>
+              <td><b>AGE:</b></td>
+              <td>00</td>
             </tr>
             <tr>
-              <td class="left"><b>GENDER:</b></td>
-              <td class="right">Gen. / Pron.</td>
+              <td><b>GENDER:</b></td>
+              <td>Gen. / Pron.</td>
             </tr>
             <tr>
-              <td class="left"><b>OCCUP.:</b></td>
-              <td class="right">Occupation</td>
+              <td><b>OCCUP.:</b></td>
+              <td>Occupation</td>
             </tr>
             <tr>
-               <td class="left"><b>NATION.:</b></td>
-               <td class="right">Nationality</td>
+               <td><b>NATION.:</b></td>
+               <td>Nationality</td>
             </tr>
           </table>
 
@@ -534,20 +532,20 @@ table {
         <div class="cinfo">
           <table>
             <tr>
-              <td ><b>AGE:</b></td>
-              <td class="right">00</td>
+              <td><b>AGE:</b></td>
+              <td>00</td>
             </tr>
             <tr>
-              <td class="left"><b>GENDER:</b></td>
-              <td class="right">Gen. / Pron.</td>
+              <td><b>GENDER:</b></td>
+              <td>Gen. / Pron.</td>
             </tr>
             <tr>
-              <td class="left"><b>OCCUP.:</b></td>
-              <td class="right">Occupation</td>
+              <td><b>OCCUP.:</b></td>
+              <td>Occupation</td>
             </tr>
             <tr>
-               <td class="left"><b>NATION.:</b></td>
-               <td class="right">Nationality</td>
+               <td><b>NATION.:</b></td>
+               <td>Nationality</td>
             </tr>
           </table>
 
@@ -569,20 +567,20 @@ table {
         <div class="cinfo">
           <table>
             <tr>
-              <td ><b>AGE:</b></td>
-              <td class="right">00</td>
+              <td><b>AGE:</b></td>
+              <td>00</td>
             </tr>
             <tr>
-              <td class="left"><b>GENDER:</b></td>
-              <td class="right">Gen. / Pron.</td>
+              <td><b>GENDER:</b></td>
+              <td>Gen. / Pron.</td>
             </tr>
             <tr>
-              <td class="left"><b>OCCUP.:</b></td>
-              <td class="right">Occupation</td>
+              <td><b>OCCUP.:</b></td>
+              <td>Occupation</td>
             </tr>
             <tr>
-               <td class="left"><b>NATION.:</b></td>
-               <td class="right">Nationality</td>
+               <td><b>NATION.:</b></td>
+               <td>Nationality</td>
             </tr>
           </table>
 
@@ -604,20 +602,20 @@ table {
         <div class="cinfo">
           <table>
             <tr>
-              <td ><b>AGE:</b></td>
-              <td class="right">00</td>
+              <td><b>AGE:</b></td>
+              <td>00</td>
             </tr>
             <tr>
-              <td class="left"><b>GENDER:</b></td>
-              <td class="right">Gen. / Pron.</td>
+              <td><b>GENDER:</b></td>
+              <td>Gen. / Pron.</td>
             </tr>
             <tr>
-              <td class="left"><b>OCCUP.:</b></td>
-              <td class="right">Occupation</td>
+              <td><b>OCCUP.:</b></td>
+              <td>Occupation</td>
             </tr>
             <tr>
-               <td class="left"><b>NATION.:</b></td>
-               <td class="right">Nationality</td>
+               <td><b>NATION.:</b></td>
+               <td>Nationality</td>
             </tr>
           </table>
 
@@ -639,20 +637,20 @@ table {
         <div class="cinfo">
           <table>
             <tr>
-              <td ><b>AGE:</b></td>
-              <td class="right">00</td>
+              <td><b>AGE:</b></td>
+              <td>00</td>
             </tr>
             <tr>
-              <td class="left"><b>GENDER:</b></td>
-              <td class="right">Gen. / Pron.</td>
+              <td><b>GENDER:</b></td>
+              <td>Gen. / Pron.</td>
             </tr>
             <tr>
-              <td class="left"><b>OCCUP.:</b></td>
-              <td class="right">Occupation</td>
+              <td><b>OCCUP.:</b></td>
+              <td>Occupation</td>
             </tr>
             <tr>
-               <td class="left"><b>NATION.:</b></td>
-               <td class="right">Nationality</td>
+               <td><b>NATION.:</b></td>
+               <td>Nationality</td>
             </tr>
           </table>
 
@@ -674,20 +672,20 @@ table {
         <div class="cinfo">
           <table>
             <tr>
-              <td ><b>AGE:</b></td>
-              <td class="right">00</td>
+              <td><b>AGE:</b></td>
+              <td>00</td>
             </tr>
             <tr>
-              <td class="left"><b>GENDER:</b></td>
-              <td class="right">Gen. / Pron.</td>
+              <td><b>GENDER:</b></td>
+              <td>Gen. / Pron.</td>
             </tr>
             <tr>
-              <td class="left"><b>OCCUP.:</b></td>
-              <td class="right">Occupation</td>
+              <td><b>OCCUP.:</b></td>
+              <td>Occupation</td>
             </tr>
             <tr>
-               <td class="left"><b>NATION.:</b></td>
-               <td class="right">Nationality</td>
+               <td><b>NATION.:</b></td>
+               <td>Nationality</td>
             </tr>
           </table>
 
@@ -709,20 +707,20 @@ table {
         <div class="cinfo">
           <table>
             <tr>
-              <td ><b>AGE:</b></td>
-              <td class="right">00</td>
+              <td><b>AGE:</b></td>
+              <td>00</td>
             </tr>
             <tr>
-              <td class="left"><b>GENDER:</b></td>
-              <td class="right">Gen. / Pron.</td>
+              <td><b>GENDER:</b></td>
+              <td>Gen. / Pron.</td>
             </tr>
             <tr>
-              <td class="left"><b>OCCUP.:</b></td>
-              <td class="right">Occupation</td>
+              <td><b>OCCUP.:</b></td>
+              <td>Occupation</td>
             </tr>
             <tr>
-               <td class="left"><b>NATION.:</b></td>
-               <td class="right">Nationality</td>
+               <td><b>NATION.:</b></td>
+               <td>Nationality</td>
             </tr>
           </table>
 
@@ -744,20 +742,20 @@ table {
         <div class="cinfo">
           <table>
             <tr>
-              <td ><b>AGE:</b></td>
-              <td class="right">00</td>
+              <td><b>AGE:</b></td>
+              <td>00</td>
             </tr>
             <tr>
-              <td class="left"><b>GENDER:</b></td>
-              <td class="right">Gen. / Pron.</td>
+              <td><b>GENDER:</b></td>
+              <td>Gen. / Pron.</td>
             </tr>
             <tr>
-              <td class="left"><b>OCCUP.:</b></td>
-              <td class="right">Occupation</td>
+              <td><b>OCCUP.:</b></td>
+              <td>Occupation</td>
             </tr>
             <tr>
-               <td class="left"><b>NATION.:</b></td>
-               <td class="right">Nationality</td>
+               <td><b>NATION.:</b></td>
+               <td>Nationality</td>
             </tr>
           </table>
 
@@ -779,20 +777,20 @@ table {
         <div class="cinfo">
           <table>
             <tr>
-              <td ><b>AGE:</b></td>
-              <td class="right">00</td>
+              <td><b>AGE:</b></td>
+              <td>00</td>
             </tr>
             <tr>
-              <td class="left"><b>GENDER:</b></td>
-              <td class="right">Gen. / Pron.</td>
+              <td><b>GENDER:</b></td>
+              <td>Gen. / Pron.</td>
             </tr>
             <tr>
-              <td class="left"><b>OCCUP.:</b></td>
-              <td class="right">Occupation</td>
+              <td><b>OCCUP.:</b></td>
+              <td>Occupation</td>
             </tr>
             <tr>
-               <td class="left"><b>NATION.:</b></td>
-               <td class="right">Nationality</td>
+               <td><b>NATION.:</b></td>
+               <td>Nationality</td>
             </tr>
           </table>
 
@@ -816,20 +814,20 @@ table {
         <div class="cinfo">
           <table>
             <tr>
-              <td ><b>AGE:</b></td>
-              <td class="right">00</td>
+              <td><b>AGE:</b></td>
+              <td>00</td>
             </tr>
             <tr>
-              <td class="left"><b>GENDER:</b></td>
-              <td class="right">Gen. / Pron.</td>
+              <td><b>GENDER:</b></td>
+              <td>Gen. / Pron.</td>
             </tr>
             <tr>
-              <td class="left"><b>OCCUP.:</b></td>
-              <td class="right">Occupation</td>
+              <td><b>OCCUP.:</b></td>
+              <td>Occupation</td>
             </tr>
             <tr>
-               <td class="left"><b>NATION.:</b></td>
-               <td class="right">Nationality</td>
+               <td><b>NATION.:</b></td>
+               <td>Nationality</td>
             </tr>
           </table>
 
@@ -851,20 +849,20 @@ table {
         <div class="cinfo">
           <table>
             <tr>
-              <td ><b>AGE:</b></td>
-              <td class="right">00</td>
+              <td><b>AGE:</b></td>
+              <td>00</td>
             </tr>
             <tr>
-              <td class="left"><b>GENDER:</b></td>
-              <td class="right">Gen. / Pron.</td>
+              <td><b>GENDER:</b></td>
+              <td>Gen. / Pron.</td>
             </tr>
             <tr>
-              <td class="left"><b>OCCUP.:</b></td>
-              <td class="right">Occupation</td>
+              <td><b>OCCUP.:</b></td>
+              <td>Occupation</td>
             </tr>
             <tr>
-               <td class="left"><b>NATION.:</b></td>
-               <td class="right">Nationality</td>
+               <td><b>NATION.:</b></td>
+               <td>Nationality</td>
             </tr>
           </table>
 
@@ -886,20 +884,20 @@ table {
         <div class="cinfo">
           <table>
             <tr>
-              <td ><b>AGE:</b></td>
-              <td class="right">00</td>
+              <td><b>AGE:</b></td>
+              <td>00</td>
             </tr>
             <tr>
-              <td class="left"><b>GENDER:</b></td>
-              <td class="right">Gen. / Pron.</td>
+              <td><b>GENDER:</b></td>
+              <td>Gen. / Pron.</td>
             </tr>
             <tr>
-              <td class="left"><b>OCCUP.:</b></td>
-              <td class="right">Occupation</td>
+              <td><b>OCCUP.:</b></td>
+              <td>Occupation</td>
             </tr>
             <tr>
-               <td class="left"><b>NATION.:</b></td>
-               <td class="right">Nationality</td>
+               <td><b>NATION.:</b></td>
+               <td>Nationality</td>
             </tr>
           </table>
 
@@ -921,20 +919,20 @@ table {
         <div class="cinfo">
           <table>
             <tr>
-              <td ><b>AGE:</b></td>
-              <td class="right">00</td>
+              <td><b>AGE:</b></td>
+              <td>00</td>
             </tr>
             <tr>
-              <td class="left"><b>GENDER:</b></td>
-              <td class="right">Gen. / Pron.</td>
+              <td><b>GENDER:</b></td>
+              <td>Gen. / Pron.</td>
             </tr>
             <tr>
-              <td class="left"><b>OCCUP.:</b></td>
-              <td class="right">Occupation</td>
+              <td><b>OCCUP.:</b></td>
+              <td>Occupation</td>
             </tr>
             <tr>
-               <td class="left"><b>NATION.:</b></td>
-               <td class="right">Nationality</td>
+               <td><b>NATION.:</b></td>
+               <td>Nationality</td>
             </tr>
           </table>
 
@@ -956,20 +954,20 @@ table {
         <div class="cinfo">
           <table>
             <tr>
-              <td ><b>AGE:</b></td>
-              <td class="right">00</td>
+              <td><b>AGE:</b></td>
+              <td>00</td>
             </tr>
             <tr>
-              <td class="left"><b>GENDER:</b></td>
-              <td class="right">Gen. / Pron.</td>
+              <td><b>GENDER:</b></td>
+              <td>Gen. / Pron.</td>
             </tr>
             <tr>
-              <td class="left"><b>OCCUP.:</b></td>
-              <td class="right">Occupation</td>
+              <td><b>OCCUP.:</b></td>
+              <td>Occupation</td>
             </tr>
             <tr>
-               <td class="left"><b>NATION.:</b></td>
-               <td class="right">Nationality</td>
+               <td><b>NATION.:</b></td>
+               <td>Nationality</td>
             </tr>
           </table>
 
@@ -991,20 +989,20 @@ table {
         <div class="cinfo">
           <table>
             <tr>
-              <td ><b>AGE:</b></td>
-              <td class="right">00</td>
+              <td><b>AGE:</b></td>
+              <td>00</td>
             </tr>
             <tr>
-              <td class="left"><b>GENDER:</b></td>
-              <td class="right">Gen. / Pron.</td>
+              <td><b>GENDER:</b></td>
+              <td>Gen. / Pron.</td>
             </tr>
             <tr>
-              <td class="left"><b>OCCUP.:</b></td>
-              <td class="right">Occupation</td>
+              <td><b>OCCUP.:</b></td>
+              <td>Occupation</td>
             </tr>
             <tr>
-               <td class="left"><b>NATION.:</b></td>
-               <td class="right">Nationality</td>
+               <td><b>NATION.:</b></td>
+               <td>Nationality</td>
             </tr>
           </table>
 
@@ -1026,20 +1024,20 @@ table {
         <div class="cinfo">
           <table>
             <tr>
-              <td ><b>AGE:</b></td>
-              <td class="right">00</td>
+              <td><b>AGE:</b></td>
+              <td>00</td>
             </tr>
             <tr>
-              <td class="left"><b>GENDER:</b></td>
-              <td class="right">Gen. / Pron.</td>
+              <td><b>GENDER:</b></td>
+              <td>Gen. / Pron.</td>
             </tr>
             <tr>
-              <td class="left"><b>OCCUP.:</b></td>
-              <td class="right">Occupation</td>
+              <td><b>OCCUP.:</b></td>
+              <td>Occupation</td>
             </tr>
             <tr>
-               <td class="left"><b>NATION.:</b></td>
-               <td class="right">Nationality</td>
+               <td><b>NATION.:</b></td>
+               <td>Nationality</td>
             </tr>
           </table>
 
@@ -1061,20 +1059,20 @@ table {
         <div class="cinfo">
           <table>
             <tr>
-              <td ><b>AGE:</b></td>
-              <td class="right">00</td>
+              <td><b>AGE:</b></td>
+              <td>00</td>
             </tr>
             <tr>
-              <td class="left"><b>GENDER:</b></td>
-              <td class="right">Gen. / Pron.</td>
+              <td><b>GENDER:</b></td>
+              <td>Gen. / Pron.</td>
             </tr>
             <tr>
-              <td class="left"><b>OCCUP.:</b></td>
-              <td class="right">Occupation</td>
+              <td><b>OCCUP.:</b></td>
+              <td>Occupation</td>
             </tr>
             <tr>
-               <td class="left"><b>NATION.:</b></td>
-               <td class="right">Nationality</td>
+               <td><b>NATION.:</b></td>
+               <td>Nationality</td>
             </tr>
           </table>
 
@@ -1096,20 +1094,20 @@ table {
         <div class="cinfo">
           <table>
             <tr>
-              <td ><b>AGE:</b></td>
-              <td class="right">00</td>
+              <td><b>AGE:</b></td>
+              <td>00</td>
             </tr>
             <tr>
-              <td class="left"><b>GENDER:</b></td>
-              <td class="right">Gen. / Pron.</td>
+              <td><b>GENDER:</b></td>
+              <td>Gen. / Pron.</td>
             </tr>
             <tr>
-              <td class="left"><b>OCCUP.:</b></td>
-              <td class="right">Occupation</td>
+              <td><b>OCCUP.:</b></td>
+              <td>Occupation</td>
             </tr>
             <tr>
-               <td class="left"><b>NATION.:</b></td>
-               <td class="right">Nationality</td>
+               <td><b>NATION.:</b></td>
+               <td>Nationality</td>
             </tr>
           </table>
 
@@ -1213,25 +1211,48 @@ table {
   /*FIX LEGEND ON SCROLL*/
   $(function($) {
       function fixedLegend() {
-          if ($(window).scrollTop() > 240)
+          var headerSize = $('header').height();
+          if ($(window).scrollTop() > 50) {
             $('nav').css({
               'position': 'fixed',
               'width': '100%',
-              'z-index': '99999999',
+              'z-index': '9999999',
               'margin': '0 auto',
               'left': '0',
               'background': 'rgba(255, 255, 255, 0.9)',
+              'top': headerSize
+              });
+            $('header').css({
+              'position': 'fixed',
+              'width': '100%',
+              'z-index': '9999999',
+              'margin': '0 auto',
+              'left': '0',
               'top': '0px'
               });
-
-           else
+            $('#desc').css({
+              'display' : 'none',
+              'border' : 'none'
+              });
+          }
+           else {
              $('nav').css({
                'position': 'relative',
                'background': 'rgba(255, 255, 255, 1)',
                'margin': '30px 0 0 0',
                'top': 'auto'
                });
+             $('header').css({
+               'position': 'relative',
+               'margin': '0px auto 20px;',
+               'top': 'auto'
+               });
+             $('#desc').css({
+              'display' : 'block',
+              'border-bottom' : '20px solid #fff'
+              });
            }
+  }
 
   $(window).scroll(fixedLegend);
     fixedLegend();
