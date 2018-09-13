@@ -2736,49 +2736,55 @@ li span {
 
   /*FIX LEGEND ON SCROLL*/
   $(function($) {
-      function fixedLegend() {
-          var headerSize = $('header').height();
-          if ($(window).scrollTop() > 50) {
+     function fixedLegend() {
+         var headerSize = $('header').height();
+         if ($(window).scrollTop() > 50) {
+           $('nav').css({
+             'position': 'fixed',
+             'width': '100%',
+             'z-index': '9999999',
+             'margin': '0 auto',
+             'left': '0',
+             'background': 'rgba(255, 255, 255, 0.9)',
+             'top': headerSize
+             });
+           $('header').css({
+             'position': 'fixed',
+             'width': '100%',
+             'z-index': '9999999',
+             'margin': '0 auto',
+             'left': '0',
+             'top': '0px'
+             });
+           $('#desc').css({
+             'display' : 'none',
+             'border' : 'none'
+             });
+           $('#grid').css({
+             'margin-top' : '280px',
+             });
+         }
+          else {
             $('nav').css({
-              'position': 'fixed',
-              'width': '100%',
-              'z-index': '9999999',
-              'margin': '0 auto',
-              'left': '0',
-              'background': 'rgba(255, 255, 255, 0.9)',
-              'top': headerSize
+              'position': 'relative',
+              'background': 'rgba(255, 255, 255, 1)',
+              'margin': '30px 0 0 0',
+              'top': 'auto'
               });
             $('header').css({
-              'position': 'fixed',
-              'width': '100%',
-              'z-index': '9999999',
-              'margin': '0 auto',
-              'left': '0',
-              'top': '0px'
+              'position': 'relative',
+              'margin': '0px auto 20px;',
+              'top': 'auto'
               });
             $('#desc').css({
-              'display' : 'none',
-              'border' : 'none'
-              });
+             'display' : 'block',
+             'border-bottom' : '20px solid #fff'
+             });
+            $('#grid').css({
+             'margin-top' : '50px',
+             });
           }
-           else {
-             $('nav').css({
-               'position': 'relative',
-               'background': 'rgba(255, 255, 255, 1)',
-               'margin': '30px 0 0 0',
-               'top': 'auto'
-               });
-             $('header').css({
-               'position': 'relative',
-               'margin': '0px auto 20px;',
-               'top': 'auto'
-               });
-             $('#desc').css({
-              'display' : 'block',
-              'border-bottom' : '20px solid #fff'
-              });
-           }
-  }
+ }
 
   $(window).scroll(fixedLegend);
     fixedLegend();
